@@ -13,7 +13,9 @@ GameObject:
   - component: {fileID: 2058661626809426307}
   - component: {fileID: 2058661626809426308}
   - component: {fileID: -8323700132589146085}
-  m_Layer: 0
+  - component: {fileID: 2672500843390078307}
+  - component: {fileID: 5093650947392403502}
+  m_Layer: 7
   m_Name: Square
   m_TagString: Rope
   m_Icon: {fileID: 0}
@@ -158,3 +160,43 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.11, y: 0.49}
   m_EdgeRadius: 0
+--- !u!114 &2672500843390078307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058661626809426309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a89b3e6c5e35524fb0eec3af93f4cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: d009258e756f22c42b1c94247d877c55, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5093650947392403502}
+        m_TargetAssemblyTypeName: RopeManager, Assembly-CSharp
+        m_MethodName: CheckIfDestroy
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5093650947392403502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058661626809426309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c604f48bed3cdc43a0e8a4e758e1345, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -6,6 +6,8 @@ public class RopeCut : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Camera camera;
+
+    [SerializeField] private CutRope cutrope;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -21,13 +23,8 @@ public class RopeCut : MonoBehaviour
             Invoke(nameof(trail), 0.05f);
             RaycastHit2D hit = Physics2D.Raycast(camera.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
             if (hit.collider != null)
-            {
-                Debug.Log("Träffa något");
-                if (hit.collider.tag == "Rope")
-                {
-                    Debug.Log("Träffa rep");
-                    Destroy(hit.collider.gameObject);
-                }
+            { 
+                cutrope.Raise(hit.collider.gameObject);
             }
         }
     }
