@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class CutRope : ScriptableObject
 {
-    private List<GameEventListener> _listeners = new List<GameEventListener>();
+    private List<CutRopeEvent> _listeners = new List<CutRopeEvent>();
 
     public void Raise(GameObject target)
     {
@@ -14,11 +14,11 @@ public class CutRope : ScriptableObject
         }
     }
 
-    public void RegisterListener(GameEventListener listener)
+    public void RegisterListener(CutRopeEvent listener)
     {
         _listeners.Add(listener);
     }
-    public void UnregisterListener(GameEventListener listener)
+    public void UnregisterListener(CutRopeEvent listener)
     {
         _listeners.Remove(listener);
     }

@@ -1,12 +1,11 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GameEventListener : MonoBehaviour
+public class HitRopeEvent : MonoBehaviour
 {
-    public CutRope Event;
+    public HitBowl Event;
     public UnityEvent<GameObject> Response;
 
     private void OnEnable()
@@ -19,7 +18,7 @@ public class GameEventListener : MonoBehaviour
         Event.UnregisterListener(this);
     }
 
-    public void OnEventRaised(GameObject gameObject)
+    public void OnEventRaised()
     {
         Response.Invoke(gameObject);
     }

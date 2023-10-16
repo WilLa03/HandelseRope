@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class RopeManager : MonoBehaviour
 {
-    private HingeJoint2D hinge;
     void Start()
     {
-        hinge = GetComponent<HingeJoint2D>();
     }
 
     // Update is called once per frame

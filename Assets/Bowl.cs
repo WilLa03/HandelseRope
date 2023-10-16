@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class Bowl : MonoBehaviour
 {
+    [SerializeField] private HitBowl hitBowl;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(other.gameObject);
-        Debug.Log("hjafsa");
+        hitBowl.Raise();
     }
 }
