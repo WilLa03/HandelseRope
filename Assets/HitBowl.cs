@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class HitBowl : ScriptableObject
 {
-    private List<HitRopeEvent> _listeners = new List<HitRopeEvent>();
+    private List<HitBowlEvent> _listeners = new List<HitBowlEvent>();
 
     public void Raise()
     {
@@ -14,11 +14,11 @@ public class HitBowl : ScriptableObject
         }
     }
 
-    public void RegisterListener(HitRopeEvent listener)
+    public void RegisterListener(HitBowlEvent listener)
     {
         _listeners.Add(listener);
     }
-    public void UnregisterListener(HitRopeEvent listener)
+    public void UnregisterListener(HitBowlEvent listener)
     {
         _listeners.Remove(listener);
     }

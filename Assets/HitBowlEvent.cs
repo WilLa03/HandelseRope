@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class HitRopeEvent : MonoBehaviour
+public class HitBowlEvent : MonoBehaviour
 {
     public HitBowl Event;
     public UnityEvent<GameObject> Response;
