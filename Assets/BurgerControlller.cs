@@ -6,14 +6,40 @@ using UnityEngine;
 public class BurgerControlller : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private void Start()
+    private bool gravity;
+    [SerializeField]private float InverseGravityScale;
+    private float GravityScale;
+    private void Awake()
     {
         rb=GetComponent<Rigidbody2D>();
+        GravityScale = rb.gravityScale;
     }
 
     private void Update()
     {
-        Debug.Log(rb.velocity.y);
+        if (rb.velocity.y > 1.2f)
+        {
+            rb.velocity = new Vector2(rb.velocity.x,1.2f);
+        }
+        else if (rb.velocity.y < -2f)
+        {
+            rb.velocity = new Vector2(rb.velocity.x,-2f);
+        }
+    }
+
+    public void ChangeGravity()
+    {
+        if (!gravity)
+        {
+            rb.gravityScale = InverseGravityScale;
+            rb.velocity = new Vector2(rb.velocity.x, 1f);
+            gravity = true;
+        }
+        else
+        {
+            rb.gravityScale = GravityScale;
+            gravity = false;
+        }
     }
 
     public void RemoveBurger()

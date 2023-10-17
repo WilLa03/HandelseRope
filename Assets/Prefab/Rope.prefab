@@ -15,8 +15,9 @@ GameObject:
   - component: {fileID: 2672500843390078307}
   - component: {fileID: 5093650947392403502}
   - component: {fileID: -5353351955992536512}
+  - component: {fileID: -2635576792960107636}
   m_Layer: 7
-  m_Name: Square
+  m_Name: Rope
   m_TagString: Rope
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,8 +102,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10
-  m_LinearDrag: 0
+  m_Mass: 8
+  m_LinearDrag: 0.1
   m_AngularDrag: 0
   m_GravityScale: 0.5
   m_Material: {fileID: 0}
@@ -174,6 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c604f48bed3cdc43a0e8a4e758e1345, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InverseGravityScale: -0.3
 --- !u!58 &-5353351955992536512
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -190,3 +192,31 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.12
+--- !u!114 &-2635576792960107636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058661626809426309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e396133cf64ad043a2e9da42e86d1b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 8977ee083b6cbf34083260bdd7815ed1, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5093650947392403502}
+        m_TargetAssemblyTypeName: RopeManager, Assembly-CSharp
+        m_MethodName: ChangeGravity
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

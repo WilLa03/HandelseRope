@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1322612115234857454}
   - component: {fileID: 1322612115234857452}
   - component: {fileID: 1322612115234857455}
+  - component: {fileID: -3337462606099740848}
   m_Layer: 9
   m_Name: Burger
   m_TagString: Untagged
@@ -30,14 +31,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1322612115234857444}
-  m_LocalRotation: {x: -0, y: -0, z: 0.27382505, w: 0.96177953}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.4785, y: -0.7477, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 31.784}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1322612115234857445
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -102,8 +103,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 2
-  m_LinearDrag: 0
+  m_Mass: 10
+  m_LinearDrag: 0.3
   m_AngularDrag: 0
   m_GravityScale: 0.2
   m_Material: {fileID: 0}
@@ -148,7 +149,7 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: -0.0053370493, y: 0.012899858}
   m_ConnectedAnchor: {x: -0.04694066, y: -0.23482183}
   m_UseMotor: 0
@@ -174,7 +175,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.16
+  m_Radius: 0.13
 --- !u!114 &1322612115234857452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,3 +216,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a2d85928aa4e8849861c2ccfa1d51f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InverseGravityScale: -0.6
+--- !u!114 &-3337462606099740848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322612115234857444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e396133cf64ad043a2e9da42e86d1b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 8977ee083b6cbf34083260bdd7815ed1, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1322612115234857455}
+        m_TargetAssemblyTypeName: BurgerControlller, Assembly-CSharp
+        m_MethodName: ChangeGravity
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

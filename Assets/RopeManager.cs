@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class RopeManager : MonoBehaviour
 {
-    void Start()
+    private Rigidbody2D rb;
+    private bool gravity;
+    private float GravityScale;
+    private void Start()
     {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        rb=GetComponent<Rigidbody2D>();
+        GravityScale = rb.gravityScale;
     }
 
     public void CheckIfDestroy(GameObject target)
@@ -29,6 +28,20 @@ public class RopeManager : MonoBehaviour
         for (int i = 0; i < childCount; i++)
         {
             Destroy(gameObject.transform.parent.gameObject.transform.GetChild(i).gameObject, 0.5f);
+        }
+    }
+    
+    public void ChangeGravity()
+    {
+        if (!gravity)
+        {
+            rb.gravityScale = 0;
+            gravity = true;
+        }
+        else
+        {
+            rb.gravityScale = GravityScale;
+            gravity = false;
         }
     }
     
