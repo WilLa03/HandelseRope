@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a2d85928aa4e8849861c2ccfa1d51f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InverseGravityScale: -0.6
+  InverseGravityScale: -2
 --- !u!114 &-3337462606099740848
 MonoBehaviour:
   m_ObjectHideFlags: 0

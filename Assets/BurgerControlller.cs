@@ -17,9 +17,9 @@ public class BurgerControlller : MonoBehaviour
 
     private void Update()
     {
-        if (rb.velocity.y > 1.2f)
+        if (rb.velocity.y > 1f)
         {
-            rb.velocity = new Vector2(rb.velocity.x,1.2f);
+            rb.velocity = new Vector2(rb.velocity.x,1f);
         }
         else if (rb.velocity.y < -2f)
         {
