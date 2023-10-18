@@ -7,6 +7,7 @@ public class RopeManager : MonoBehaviour
     private Rigidbody2D rb;
     private bool gravity;
     private float GravityScale;
+    [SerializeField] private ParticleSystem ParticleSystem;
     private void Start()
     {
         rb=GetComponent<Rigidbody2D>();
@@ -17,7 +18,7 @@ public class RopeManager : MonoBehaviour
     {
         if (target == gameObject)
         {
-            Destroy(gameObject);
+            PrepDeath();
             RemoveEarlierChains();
         }
     }
@@ -44,5 +45,20 @@ public class RopeManager : MonoBehaviour
             gravity = false;
         }
     }
-    
+    void PrepDeath()
+    {
+        var emission = ParticleSystem.emission;
+        emission.enabled = true; 
+        ParticleSystem.Play();
+        GetComponent<SpriteRenderer>().enabled = false;
+        GetComponent<Collider2D>().enabled = false;
+        GetComponent<OnBubbleEvent>().enabled = false;
+        Destroy(GetComponent<HingeJoint2D>());
+        Destroy(GetComponent<Rigidbody2D>());
+        Invoke(nameof(DestroyObj),ParticleSystem.main.duration);
+    }
+    void DestroyObj()
+    {
+        Destroy(gameObject);
+    }
 }
