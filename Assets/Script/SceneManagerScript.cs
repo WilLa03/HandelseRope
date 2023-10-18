@@ -17,7 +17,13 @@ public class SceneManagerScript : MonoBehaviour
     }
     public void ReloadScene()
     {
+        Invoke(nameof(Load), 0.2f);
+        
+    }
+
+    private void Load()
+    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    
+
 }

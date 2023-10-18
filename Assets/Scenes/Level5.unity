@@ -1292,7 +1292,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4255075573007846312, guid: 950432397948c3a4fbe9336a9d9a8ab1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.099
       objectReference: {fileID: 0}
     - target: {fileID: 4255075573007846312, guid: 950432397948c3a4fbe9336a9d9a8ab1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2194,7 +2194,7 @@ Transform:
   - {fileID: 1826222854}
   - {fileID: 1051424894}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1051424888 stripped
 Rigidbody2D:
@@ -2350,7 +2350,7 @@ Transform:
   - {fileID: 91409938}
   - {fileID: 1079823657}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1079823657 stripped
 Transform:
@@ -3118,7 +3118,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1442730761
 PrefabInstance:
@@ -3779,17 +3779,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c60f0e3f7c054fe41aefe1b9dfc970c8, type: 3}
---- !u!114 &2077842086 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4929770712406173496, guid: 0b88dab28e341c3499911444b73578c4, type: 3}
-  m_PrefabInstance: {fileID: 873505171632717585}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f06574c68b65a8341906d78e257ac2e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2098189077 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2058661626809426305, guid: c60f0e3f7c054fe41aefe1b9dfc970c8, type: 3}
@@ -3808,11 +3797,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 873505170740946354, guid: 0b88dab28e341c3499911444b73578c4, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 873505170740946354, guid: 0b88dab28e341c3499911444b73578c4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.115
+      value: 0.211
       objectReference: {fileID: 0}
     - target: {fileID: 873505170740946354, guid: 0b88dab28e341c3499911444b73578c4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3849,26 +3838,6 @@ PrefabInstance:
     - target: {fileID: 873505170740946354, guid: 0b88dab28e341c3499911444b73578c4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3494530666835998174, guid: 0b88dab28e341c3499911444b73578c4, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3494530666835998174, guid: 0b88dab28e341c3499911444b73578c4, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2077842086}
-    - target: {fileID: 3494530666835998174, guid: 0b88dab28e341c3499911444b73578c4, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CheckIfDestroy
-      objectReference: {fileID: 0}
-    - target: {fileID: 3494530666835998174, guid: 0b88dab28e341c3499911444b73578c4, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: BubbleController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 3494530666835998174, guid: 0b88dab28e341c3499911444b73578c4, type: 3}
-      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b88dab28e341c3499911444b73578c4, type: 3}

@@ -105,7 +105,7 @@ Rigidbody2D:
   m_Mass: 8
   m_LinearDrag: 0.1
   m_AngularDrag: 0
-  m_GravityScale: 0.5
+  m_GravityScale: 0.3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -175,7 +175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c604f48bed3cdc43a0e8a4e758e1345, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InverseGravityScale: -0.3
 --- !u!58 &-5353351955992536512
 CircleCollider2D:
   m_ObjectHideFlags: 0
