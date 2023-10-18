@@ -1,0 +1,7 @@
+End och start scene
+UI mellan levlarna med knappar
+bakgrund
+animation på score ui?
+fler levlar
+
+tweeka ropecutter
