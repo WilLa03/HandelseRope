@@ -143,6 +143,8 @@ GameObject:
   - component: {fileID: 9042366260987588103}
   - component: {fileID: 9042366260987588102}
   - component: {fileID: 7988147263583328081}
+  - component: {fileID: 8940989575240723593}
+  - component: {fileID: 1570936124276401912}
   m_Layer: 6
   m_Name: RopeCutter
   m_TagString: Untagged
@@ -216,3 +218,43 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.03
+--- !u!114 &8940989575240723593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9042366260987588101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce6f972a8262a024ab1a70ebcc16312c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 1863e5ab18f7a9c4ea9e4c1e72df30f4, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1570936124276401912}
+        m_TargetAssemblyTypeName: CutterDestroy, Assembly-CSharp
+        m_MethodName: DestoyGameObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1570936124276401912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9042366260987588101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e92d4aeee922c6c40ba244fc244ebe08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

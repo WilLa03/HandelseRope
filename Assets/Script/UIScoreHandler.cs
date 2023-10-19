@@ -10,7 +10,7 @@ public class UIScoreHandler : MonoBehaviour
 
     private void Awake()
     {
-        for (int i = 1; i < transform.childCount; i++)
+        for (int i = 0; i < 3; i++)
         {
             images.Add(transform.GetChild(i).GetComponent<Image>());
         }

@@ -1,6 +1,5 @@
-End och start scene
-UI mellan levlarna med knappar
-bakgrund
+
+bakgrund (primärt klar)
 animation på score ui?
 fler levlar
 
