@@ -2550,6 +2550,14 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 0.04
       objectReference: {fileID: 0}
+    - target: {fileID: 7988147263583328081, guid: 78cd402e483153343b924826bfe12cd0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988147263583328081, guid: 78cd402e483153343b924826bfe12cd0, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9042366260987588101, guid: 78cd402e483153343b924826bfe12cd0, type: 3}
       propertyPath: m_Name
       value: RopeCutter

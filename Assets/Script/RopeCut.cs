@@ -10,8 +10,10 @@ public class RopeCut : MonoBehaviour
 
     [SerializeField] private CutRope cutrope;
     private Collider2D _collider2D;
-    void Start()
+    private Vector3 lastPos;
+    void Awake()
     {
+        lastPos = transform.position;
         rb = GetComponent<Rigidbody2D>();
         camera= Camera.main;
         _collider2D = GetComponent<CircleCollider2D>();
@@ -20,26 +22,34 @@ public class RopeCut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButton("Jump"))
+        {
+            UnityEditor.EditorApplication.isPaused = true;
+        }
         if (Input.GetMouseButton(0))
         {
             rb.position = camera.ScreenToWorldPoint(Input.mousePosition);
             Invoke(nameof(trail), 0.05f);
             _collider2D.enabled = true;
+
+            RaycastHit2D hit = Physics2D.Raycast(lastPos, (transform.position - lastPos).normalized,
+                (transform.position - lastPos).magnitude, 2176);
+            if (hit.collider != null && gameObject.transform.GetChild(0).gameObject.activeSelf)
+            {
+                cutrope.Raise(hit.transform.gameObject);
+                Debug.Log(hit.transform.name);
+            }
         }
         else
         {
             _collider2D.enabled = false;
+            gameObject.transform.GetChild(0).gameObject.SetActive(false);
         }
-
+        lastPos = transform.position;
     }
 
     private void trail()
     {
         gameObject.transform.GetChild(0).gameObject.SetActive(true);
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        cutrope.Raise(other.gameObject);
     }
 }

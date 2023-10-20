@@ -1,6 +1,3 @@
 
 bakgrund (primärt klar)
-animation på score ui?
 fler levlar
-
-tweeka ropecutter

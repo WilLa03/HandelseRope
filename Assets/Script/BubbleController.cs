@@ -9,25 +9,25 @@ public class BubbleController : MonoBehaviour
     [SerializeField] private ParticleSystem ParticleSystem;
     [SerializeField] private AudioSource EnterBubble;
     [SerializeField] private AudioSource DestroyBubble;
+    private bool hasBeenEntered = false;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        transform.SetParent(other.transform);
-        transform.localPosition = new Vector3(0,0,0);
-        gameObject.layer = LayerMask.NameToLayer("Rope");
-        if (EnterBubble.clip != null)
+        if (!hasBeenEntered)
         {
+            transform.SetParent(other.transform);
+            transform.localPosition = new Vector3(0,0,0);
+            gameObject.layer = LayerMask.NameToLayer("Bubble");
             EnterBubble.PlayOneShot(EnterBubble.clip);
-            EnterBubble.clip = null;
+            onBubble.Raise();
+            hasBeenEntered = true;
         }
-        onBubble.Raise();
-    }
-    public void CheckIfDestroy(GameObject target)
-    {
-        if (target == gameObject)
+        else
         {
+            onBubble.Raise();
             PrepDeath();
             DestroyBubble.Play();
         }
+        
     }
     void PrepDeath()
     {
