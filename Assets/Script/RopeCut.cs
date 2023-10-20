@@ -37,7 +37,6 @@ public class RopeCut : MonoBehaviour
             if (hit.collider != null && gameObject.transform.GetChild(0).gameObject.activeSelf)
             {
                 cutrope.Raise(hit.transform.gameObject);
-                Debug.Log(hit.transform.name);
             }
         }
         else

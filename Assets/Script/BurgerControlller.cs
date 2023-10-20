@@ -32,7 +32,7 @@ public class BurgerControlller : MonoBehaviour
         if (!gravity)
         {
             rb.gravityScale = InverseGravityScale;
-            rb.velocity = new Vector2(rb.velocity.x, 1f);
+            //rb.velocity = new Vector2(rb.velocity.x, 1f);
             gravity = true;
         }
         else
